@@ -135,7 +135,6 @@ public class App{
 	    	// create corporate customer
 	    	case 2:
 	    		Scanner input2 = new Scanner(System.in);
-
 	    		System.out.println("Please enter the name:");
 	    	    String nameCor = input2.nextLine();
 	    	    System.out.println("Please enter the current month:");
@@ -226,11 +225,7 @@ public class App{
         double rateFinal = (billRatesInd.stream().mapToDouble(Double::doubleValue).sum() + billRatesCor.stream().mapToDouble(Double::doubleValue).sum()) / (billRatesInd.size() + billRatesCor.size());
         
         System.out.println(rateFinal);
-        
-        //find the bills rate which is higher then 1500 tl -> another way for solution for individual customers
-//        List<Double> billTemp = bills.stream().filter(a -> a.getAmount() >1500.0)
-//        .map(pm ->pm.getAmount()).toList();
-//        double rate2 = billTemp.stream().mapToDouble(Double::doubleValue).sum() / (billTemp.size());
-//        System.out.println("Bills rate which is higher then 1500 TL: " + rate2 + "(Second Way)");       
+	input1.close();
+            
     }
 }
